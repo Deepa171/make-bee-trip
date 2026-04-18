@@ -1,11 +1,19 @@
 # Make Bee Trip
 
-## Features:
-- Flight Booking
-- Hotel Listing
-- API Integration
+A travel booking landing page built using React and Node.js.
 
-## Run:
+## Features:
+- Flight booking (API)
+- Hotel listing (API + UI)
+- Responsive UI
+
+## Tech Stack:
+- React JS
+- Node JS
+- Bootstrap
+
+## Run Project:
+
 Frontend:
 npm start
 
