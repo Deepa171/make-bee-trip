@@ -6,16 +6,13 @@ app.use(cors());
 
 const flights = require("./data/flights.json");
 const hotels = require("./data/hotels.json");
+const buses = require("./data/buses.json");
+const trains = require("./data/trains.json");
 
-// API 1: Flights
-app.get("/api/flights", (req, res) => {
-  res.json(flights);
-});
-
-// API 2: Hotels
-app.get("/api/hotels", (req, res) => {
-  res.json(hotels);
-});
+app.get("/api/flights", (req, res) => res.json(flights));
+app.get("/api/hotels", (req, res) => res.json(hotels));
+app.get("/api/buses", (req, res) => res.json(buses));
+app.get("/api/trains", (req, res) => res.json(trains));
 
 app.listen(5000, () => {
   console.log("Server running on port 5000");

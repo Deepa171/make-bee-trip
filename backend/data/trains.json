@@ -1,0 +1,8 @@
+[
+  { "id": 1, "route": "Delhi → Mumbai", "price": 800, "train": "Rajdhani Express" },
+  { "id": 2, "route": "Mumbai → Chennai", "price": 1000, "train": "Chennai Express" },
+  { "id": 3, "route": "Delhi → Kolkata", "price": 900, "train": "Duronto Express" },
+  { "id": 4, "route": "Bangalore → Hyderabad", "price": 600, "train": "Shatabdi Express" },
+  { "id": 5, "route": "Jaipur → Mumbai", "price": 750, "train": "Garib Rath" },
+  { "id": 6, "route": "Lucknow → Delhi", "price": 500, "train": "Gomti Express" }
+]

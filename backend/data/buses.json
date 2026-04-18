@@ -1,0 +1,8 @@
+[
+  { "id": 1, "route": "Delhi → Mumbai", "price": 1200, "operator": "RedBus Express" },
+  { "id": 2, "route": "Mumbai → Pune", "price": 400, "operator": "Shivneri" },
+  { "id": 3, "route": "Bangalore → Chennai", "price": 800, "operator": "VRL Travels" },
+  { "id": 4, "route": "Delhi → Jaipur", "price": 600, "operator": "RSRTC" },
+  { "id": 5, "route": "Hyderabad → Goa", "price": 1100, "operator": "Orange Travels" },
+  { "id": 6, "route": "Chennai → Coimbatore", "price": 500, "operator": "TNSTC" }
+]
