@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 
+const API = "https://make-bee-trip-backend-2eix.onrender.com";
+
 function Flight() {
   const [flights, setFlights] = useState([]);
 
   useEffect(() => {
-    fetch("https://make-bee-trip-backend-2eix.onrender.com/api/flights")
+    fetch(`${API}/api/flights`)
       .then(res => res.json())
       .then(data => setFlights(data));
   }, []);
