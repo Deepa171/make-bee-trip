@@ -4,7 +4,7 @@ function Flight() {
   const [flights, setFlights] = useState([]);
 
   useEffect(() => {
-    fetch("https://<your-render-app>.onrender.com/api/flights")
+    fetch("https://make-bee-trip-backend-2eix.onrender.com/api/flights")
       .then(res => res.json())
       .then(data => setFlights(data));
   }, []);

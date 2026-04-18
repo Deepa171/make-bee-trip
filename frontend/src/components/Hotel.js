@@ -4,7 +4,7 @@ function Hotel() {
   const [hotels, setHotels] = useState([]);
 
   useEffect(() => {
-    fetch("https://<your-render-app>.onrender.com/api/hotels")
+    fetch("https://make-bee-trip-backend-2eix.onrender.com/api/hotels")
       .then(res => res.json())
       .then(data => setHotels(data));
   }, []);
