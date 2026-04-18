@@ -3,7 +3,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-4">
       
       {/* Logo */}
-      <a className="navbar-brand fw-bold" href="#">
+      <a className="navbar-brand fw-bold" href="#make bee trip">
         🐝 Make Bee Trip
       </a>
 
@@ -21,16 +21,16 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav mx-auto">
           <li className="nav-item">
-            <a className="nav-link" href="#">Flights</a>
+            <a className="nav-link" href="#flights">Flights</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Bus</a>
+            <a className="nav-link" href="#bus">Bus</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Train</a>
+            <a className="nav-link" href="#train">Train</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Hotels</a>
+            <a className="nav-link" href="#hotels">Hotels</a>
           </li>
         </ul>
 
