@@ -52,10 +52,10 @@ function BookingTabs() {
   return (
     <div className="container mt-4">
       <div className="d-flex flex-wrap gap-3 mb-3">
-        <button className="btn btn-primary" onClick={() => setActive("flight")}>Flight</button>
-        <button className="btn btn-primary" onClick={() => setActive("bus")}>Bus</button>
-        <button className="btn btn-primary" onClick={() => setActive("train")}>Train</button>
-        <button className="btn btn-primary" onClick={() => setActive("hotel")}>Hotel</button>
+        <button className="btn btn-gradient" onClick={() => setActive("flight")}>Flight</button>
+        <button className="btn btn-gradient" onClick={() => setActive("bus")}>Bus</button>
+        <button className="btn btn-gradient" onClick={() => setActive("train")}>Train</button>
+        <button className="btn btn-gradient" onClick={() => setActive("hotel")}>Hotel</button>
       </div>
       {active === "flight" && <Flight />}
       {active === "bus" && <Bus />}
