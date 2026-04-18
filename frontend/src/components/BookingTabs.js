@@ -10,7 +10,11 @@ function Bus() {
     fetch(`${API}/api/buses`).then(r => r.json()).then(setBuses);
   }, []);
   return (
-    <div className="row">
+    <div>
+      <input placeholder="From" className="form-control mb-2" />
+      <input placeholder="To" className="form-control mb-2" />
+      <button className="btn btn-gradient mb-3">Search</button>
+      <div className="row">
       {buses.map(b => (
         <div className="col-md-4" key={b.id}>
           <div className="card p-3 mb-3 shadow">
@@ -21,6 +25,7 @@ function Bus() {
           </div>
         </div>
       ))}
+      </div>
     </div>
   );
 }
