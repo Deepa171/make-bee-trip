@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Taj Hotel",
+    "price": 8000,
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "Budget Inn",
+    "price": 2000,
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 3,
+    "name": "Grand Hyatt",
+    "price": 12000,
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 4,
+    "name": "Oberoi Suites",
+    "price": 15000,
+    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 5,
+    "name": "Comfort Stay",
+    "price": 2500,
+    "image": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 6,
+    "name": "Royal Palace Hotel",
+    "price": 10000,
+    "image": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 7,
+    "name": "Sea View Resort",
+    "price": 7000,
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 8,
+    "name": "Mountain Retreat",
+    "price": 5500,
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 9,
+    "name": "City Central Hotel",
+    "price": 3500,
+    "image": "https://images.unsplash.com/photo-1455587734955-081b22074882?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 10,
+    "name": "Lemon Tree Hotel",
+    "price": 4000,
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 11,
+    "name": "Novotel",
+    "price": 9000,
+    "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 12,
+    "name": "Backpacker Hostel",
+    "price": 800,
+    "image": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=300&h=200&fit=crop"
+  }
+]

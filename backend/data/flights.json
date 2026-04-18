@@ -1,0 +1,14 @@
+[
+  { "id": 1, "route": "Delhi → Mumbai", "price": 5000 },
+  { "id": 2, "route": "Delhi → Bangalore", "price": 6000 },
+  { "id": 3, "route": "Mumbai → Chennai", "price": 4500 },
+  { "id": 4, "route": "Kolkata → Delhi", "price": 5500 },
+  { "id": 5, "route": "Hyderabad → Mumbai", "price": 4000 },
+  { "id": 6, "route": "Pune → Delhi", "price": 5200 },
+  { "id": 7, "route": "Chennai → Kolkata", "price": 4800 },
+  { "id": 8, "route": "Ahmedabad → Bangalore", "price": 5700 },
+  { "id": 9, "route": "Jaipur → Mumbai", "price": 4300 },
+  { "id": 10, "route": "Lucknow → Chennai", "price": 5900 },
+  { "id": 11, "route": "Goa → Delhi", "price": 6200 },
+  { "id": 12, "route": "Bhopal → Hyderabad", "price": 3800 }
+]
