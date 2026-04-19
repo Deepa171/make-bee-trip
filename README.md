@@ -1,24 +1,24 @@
-# Make Bee Trip ✈️
+# Make Bee Trip 
 
 A Travel & Tourism landing page built using React JS and Node JS.
 
-## 🚀 Features
+## Features
 - Flight Booking (API Integration)
 - Bus Booking (Mock API)
 - Train Booking (Mock API)
 - Hotel Booking (Manual + API)
 
-## 🛠 Tech Stack
+## Tech Stack
 - React JS
 - Node JS
 - Express
 - Bootstrap
 
-## 📂 Project Structure
+## Project Structure
 - frontend/
 - backend/
 
-## ▶️ Run Locally
+## Run Locally
 
 ### Backend
 cd backend
@@ -28,7 +28,7 @@ node server.js
 cd frontend
 npm start
 
-## 🌐 Future Improvements
+## Future Improvements
 - Real API Integration
 - Search filtering
 - Booking system
