@@ -2,7 +2,7 @@ function Hero() {
   return (
     <section id="home" className="hero-section text-white text-center py-6">
       <div className="container">
-        <span className="badge bg-white text-primary rounded-pill mb-3">
+        <span className="badge hero-badge bg-white text-primary rounded-pill mb-3">
           Trusted travel bookings for every journey
         </span>
         <h1 className="display-5 fw-bold mb-3">Plan smarter, travel better</h1>
@@ -11,7 +11,7 @@ function Hero() {
           Faster search, cleaner results, seamless booking flow.
         </p>
         <div className="hero-actions d-flex justify-content-center">
-          <a href="#bookings" className="btn btn-gradient btn-lg px-5">
+          <a href="#bookings" className="btn btn-gradient btn-lg px-5 hero-cta">
             Start Booking
           </a>
         </div>
