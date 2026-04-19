@@ -27,20 +27,20 @@ function Train() {
   );
 }
 
-function BookingTabs() {
+function BookingTabs({ activeSection = "flights" }) {
   return (
     <section id="bookings" className="container mt-5">
       <div className="tab-pane">
-        <section id="flights">
+        <section id="flights" className={activeSection === "flights" ? "" : "d-none"}>
           <Flight />
         </section>
-        <section id="bus" className="mt-5">
+        <section id="bus" className={activeSection === "bus" ? "mt-5" : "d-none"}>
           <Bus />
         </section>
-        <section id="train" className="mt-5">
+        <section id="train" className={activeSection === "train" ? "mt-5" : "d-none"}>
           <Train />
         </section>
-        <section id="hotels" className="mt-5">
+        <section id="hotels" className={activeSection === "hotels" ? "mt-5" : "d-none"}>
           <Hotel />
         </section>
       </div>

@@ -1,7 +1,14 @@
-function Navbar() {
+function Navbar({ activeSection, onSelectSection }) {
+  const navItems = [
+    { id: "flights", label: "Flights" },
+    { id: "bus", label: "Bus" },
+    { id: "train", label: "Train" },
+    { id: "hotels", label: "Hotels" },
+  ];
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top px-4 py-3">
-      <a className="navbar-brand fw-bold" href="#home">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top px-4 py-3 shadow-sm">
+      <a className="navbar-brand fw-bold text-primary" href="#home">
         🐝 Make Bee Trip
       </a>
 
@@ -19,23 +26,22 @@ function Navbar() {
 
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav mx-auto">
-          <li className="nav-item">
-            <a className="nav-link" href="#flights">Flights</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#bus">Bus</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#train">Train</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#hotels">Hotels</a>
-          </li>
+          {navItems.map((item) => (
+            <li className="nav-item" key={item.id}>
+              <button
+                type="button"
+                className={`nav-link nav-button ${activeSection === item.id ? "active" : ""}`}
+                onClick={() => onSelectSection(item.id)}
+              >
+                {item.label}
+              </button>
+            </li>
+          ))}
         </ul>
 
-        <a href="#bookings" className="btn btn-gradient cta-nav">
+        <button className="btn btn-gradient cta-nav" onClick={() => onSelectSection("flights")}> 
           Book Now
-        </a>
+        </button>
       </div>
     </nav>
   );
