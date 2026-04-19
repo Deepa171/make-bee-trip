@@ -1,34 +1,54 @@
-# Make Bee Trip 
+# Make Bee Trip
 
-A Travel & Tourism landing page built using React JS and Node JS.
+A modern Travel & Tourism web application built using React JS and Node JS.  
+This project provides a seamless user experience for browsing and searching Flights, Buses, Trains, and Hotels.
 
-## Features
-- Flight Booking (API Integration)
-- Bus Booking (Mock API)
-- Train Booking (Mock API)
-- Hotel Booking (Manual + API)
+---
 
-## Tech Stack
-- React JS
-- Node JS
-- Express
-- Bootstrap
+## Live Demo
+--->  https://make-bee-trip-project.vercel.app/
 
-## Project Structure
-- frontend/
-- backend/
+##  GitHub Repository
+---> https://github.com/Deepa171/make-bee-trip.git 
 
-## Run Locally
+---
 
-### Backend
-cd backend
-node server.js
+##  Features
 
-### Frontend
-cd frontend
-npm start
+-  Flight Booking (API Integration)
+-  Bus Booking (Search & Filter Enabled)
+-  Train Booking (Search Functionality)
+-  Hotel Booking (API + UI Integration)
+-  Smart Search & Highlight Feature
+-  Fully Responsive Design
+-  Fast and User-Friendly Interface
 
-## Future Improvements
-- Real API Integration
-- Search filtering
-- Booking system
+---
+
+##  Tech Stack
+
+- Frontend: React JS, Bootstrap
+- Backend: Node JS, Express JS
+- API: REST API
+- Deployment: Vercel (Frontend), Render (Backend)
+
+---
+
+##  Project Structure
+
+make-bee-trip/
+│
+├── frontend/ # React Application
+│ ├── src/
+│ │ ├── components/ # Reusable UI components
+│ │ ├── pages/ # Pages (Flight, Bus, Train, Hotel)
+│ │ ├── App.js # Main App component
+│ │ └── index.js # Entry point
+│ └── package.json
+│
+├── backend/ # Node.js + Express Server
+│ ├── routes/ # API routes (flights, buses, etc.)
+│ ├── server.js # Main server file
+│ └── package.json
+│
+└── README.md
