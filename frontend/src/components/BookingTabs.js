@@ -28,49 +28,19 @@ function Train() {
 }
 
 function BookingTabs() {
-  const [active, setActive] = useState("flight");
-  const tabs = [
-    { id: "flight", label: "Flight" },
-    { id: "bus", label: "Bus" },
-    { id: "train", label: "Train" },
-    { id: "hotel", label: "Hotel" },
-  ];
-
   return (
     <section id="bookings" className="container mt-5">
-      <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3 mb-4">
-        <div>
-          <h2 className="section-title">Search trip options</h2>
-          <p className="text-muted mb-0">
-            Quickly compare flights, buses, trains and hotels in one polished interface.
-          </p>
-        </div>
-
-        <div className="btn-group" role="group" aria-label="Booking tabs">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              type="button"
-              className={`btn tab-button ${active === tab.id ? "btn-gradient" : "btn-outline-brand"}`}
-              onClick={() => setActive(tab.id)}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-      </div>
-
       <div className="tab-pane">
-        <section id="flights" className={active === "flight" ? "" : "d-none"}>
+        <section id="flights">
           <Flight />
         </section>
-        <section className={active === "bus" ? "" : "d-none"}>
+        <section id="bus" className="mt-5">
           <Bus />
         </section>
-        <section className={active === "train" ? "" : "d-none"}>
+        <section id="train" className="mt-5">
           <Train />
         </section>
-        <section id="hotels" className={active === "hotel" ? "" : "d-none"}>
+        <section id="hotels" className="mt-5">
           <Hotel />
         </section>
       </div>

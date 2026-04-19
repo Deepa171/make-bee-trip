@@ -10,12 +10,9 @@ function Hero() {
           Book flights, buses, trains and hotels with a single reliable experience.
           Faster search, cleaner results, seamless booking flow.
         </p>
-        <div className="hero-actions d-flex flex-column flex-sm-row justify-content-center gap-3">
-          <a href="#bookings" className="btn btn-gradient btn-lg">
+        <div className="hero-actions d-flex justify-content-center">
+          <a href="#bookings" className="btn btn-gradient btn-lg px-5">
             Start Booking
-          </a>
-          <a href="#hotels" className="btn btn-outline-light btn-lg">
-            View Hotels
           </a>
         </div>
       </div>
