@@ -1,49 +1,25 @@
 import { useState, useEffect } from "react";
 import Flight from "./Flight";
 import Hotel from "./Hotel";
+import Bus from "./Bus";
 
 const API = "https://make-bee-trip-backend-2eix.onrender.com";
-
-function Bus() {
-  const [buses, setBuses] = useState([]);
-  useEffect(() => {
-    fetch(`${API}/api/buses`).then(r => r.json()).then(setBuses);
-  }, []);
-  return (
-    <div>
-      <input placeholder="From" className="form-control mb-2" />
-      <input placeholder="To" className="form-control mb-2" />
-      <button className="btn btn-gradient mb-3">Search</button>
-      <div className="row">
-      {buses.map(b => (
-        <div className="col-md-4" key={b.id}>
-          <div className="card p-3 mb-3 shadow">
-            <h5>{b.route}</h5>
-            <p>Operator: {b.operator}</p>
-            <p>Price: ₹{b.price}</p>
-            <button className="btn btn-warning">Book Now</button>
-          </div>
-        </div>
-      ))}
-      </div>
-    </div>
-  );
-}
 
 function Train() {
   const [trains, setTrains] = useState([]);
   useEffect(() => {
-    fetch(`${API}/api/trains`).then(r => r.json()).then(setTrains);
+    fetch(`${API}/api/trains`).then((r) => r.json()).then(setTrains);
   }, []);
+
   return (
-    <div className="row">
-      {trains.map(t => (
+    <div id="train" className="row gy-4">
+      {trains.map((t) => (
         <div className="col-md-4" key={t.id}>
-          <div className="card p-3 mb-3 shadow">
-            <h5>{t.route}</h5>
-            <p>Train: {t.train}</p>
-            <p>Price: ₹{t.price}</p>
-            <button className="btn btn-info">Book Now</button>
+          <div className="card booking-card p-4 h-100">
+            <h5 className="mb-3">{t.route}</h5>
+            <p className="text-muted mb-1">Train: {t.train}</p>
+            <p className="fw-bold mb-3">₹{t.price}</p>
+            <button className="btn btn-gradient w-100">Book Now</button>
           </div>
         </div>
       ))}
@@ -53,20 +29,52 @@ function Train() {
 
 function BookingTabs() {
   const [active, setActive] = useState("flight");
+  const tabs = [
+    { id: "flight", label: "Flight" },
+    { id: "bus", label: "Bus" },
+    { id: "train", label: "Train" },
+    { id: "hotel", label: "Hotel" },
+  ];
 
   return (
-    <div className="container mt-4">
-      <div className="d-flex flex-wrap gap-3 mb-3">
-        <button className="btn btn-gradient" onClick={() => setActive("flight")}>Flight</button>
-        <button className="btn btn-gradient" onClick={() => setActive("bus")}>Bus</button>
-        <button className="btn btn-gradient" onClick={() => setActive("train")}>Train</button>
-        <button className="btn btn-gradient" onClick={() => setActive("hotel")}>Hotel</button>
+    <section id="bookings" className="container mt-5">
+      <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3 mb-4">
+        <div>
+          <h2 className="section-title">Search trip options</h2>
+          <p className="text-muted mb-0">
+            Quickly compare flights, buses, trains and hotels in one polished interface.
+          </p>
+        </div>
+
+        <div className="btn-group" role="group" aria-label="Booking tabs">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              className={`btn tab-button ${active === tab.id ? "btn-gradient" : "btn-outline-brand"}`}
+              onClick={() => setActive(tab.id)}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
       </div>
-      {active === "flight" && <Flight />}
-      {active === "bus" && <Bus />}
-      {active === "train" && <Train />}
-      {active === "hotel" && <Hotel />}
-    </div>
+
+      <div className="tab-pane">
+        <section id="flights" className={active === "flight" ? "" : "d-none"}>
+          <Flight />
+        </section>
+        <section className={active === "bus" ? "" : "d-none"}>
+          <Bus />
+        </section>
+        <section className={active === "train" ? "" : "d-none"}>
+          <Train />
+        </section>
+        <section id="hotels" className={active === "hotel" ? "" : "d-none"}>
+          <Hotel />
+        </section>
+      </div>
+    </section>
   );
 }
 

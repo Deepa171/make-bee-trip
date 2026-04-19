@@ -9,51 +9,48 @@ function Flight() {
 
   useEffect(() => {
     fetch(`${API}/api/flights`)
-      .then(res => res.json())
-      .then(data => setFlights(data));
+      .then((res) => res.json())
+      .then((data) => setFlights(data));
   }, []);
 
-  // 🔥 FILTER LOGIC
-  const filteredFlights = flights.filter(f =>
+  const filteredFlights = flights.filter((f) =>
     f.route.toLowerCase().includes(from.toLowerCase()) &&
     f.route.toLowerCase().includes(to.toLowerCase())
   );
 
   return (
-    <div>
-      {/* ✅ INPUT CONNECTED */}
-      <input
-        placeholder="From (e.g. Delhi)"
-        className="form-control mb-2"
-        onChange={(e) => setFrom(e.target.value)}
-      />
+    <div id="flights">
+      <div className="row gy-3 mb-4">
+        <div className="col-md-5">
+          <input
+            placeholder="From (e.g. Delhi)"
+            className="form-control booking-input"
+            onChange={(e) => setFrom(e.target.value)}
+          />
+        </div>
+        <div className="col-md-5">
+          <input
+            placeholder="To (e.g. Mumbai)"
+            className="form-control booking-input"
+            onChange={(e) => setTo(e.target.value)}
+          />
+        </div>
+        <div className="col-md-2 d-grid">
+          <button className="btn btn-primary">Search</button>
+        </div>
+      </div>
 
-      <input
-        placeholder="To (e.g. Mumbai)"
-        className="form-control mb-2"
-        onChange={(e) => setTo(e.target.value)}
-      />
-
-      <div className="row">
-        {filteredFlights.map(f => {
-          const isMatch =
-            f.route.toLowerCase().includes(from.toLowerCase()) ||
-            f.route.toLowerCase().includes(to.toLowerCase());
-
-          return (
-            <div className="col-md-4" key={f.id}>
-              <div
-                className={`card p-3 mb-3 shadow ${
-                  isMatch && (from || to) ? "bg-warning" : ""
-                }`}
-              >
-                <h5>{f.route}</h5>
-                <p>Price: ₹{f.price}</p>
-                <button className="btn btn-success">Book Now</button>
-              </div>
+      <div className="row gy-4">
+        {filteredFlights.map((f) => (
+          <div className="col-md-4" key={f.id}>
+            <div className="card booking-card p-4 h-100">
+              <h5 className="mb-3">{f.route}</h5>
+              <p className="text-muted mb-1">Best fare available</p>
+              <p className="fw-bold mb-3">₹{f.price}</p>
+              <button className="btn btn-gradient w-100">Book Now</button>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

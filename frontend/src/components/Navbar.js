@@ -1,23 +1,22 @@
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-4">
-      
-      {/* Logo */}
-      <a className="navbar-brand fw-bold" href="#make bee trip">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top px-4 py-3">
+      <a className="navbar-brand fw-bold" href="#home">
         🐝 Make Bee Trip
       </a>
 
-      {/* Toggle for mobile */}
       <button
         className="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      {/* Links */}
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav mx-auto">
           <li className="nav-item">
@@ -34,8 +33,9 @@ function Navbar() {
           </li>
         </ul>
 
-        {/* CTA Button */}
-        <button className="btn btn-gradient">Book Now</button>
+        <a href="#bookings" className="btn btn-gradient cta-nav">
+          Book Now
+        </a>
       </div>
     </nav>
   );

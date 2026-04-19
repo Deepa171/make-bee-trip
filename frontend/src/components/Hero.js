@@ -1,9 +1,25 @@
 function Hero() {
   return (
-    <div className="bg-dark text-white text-center p-5">
-      <h1>Make Bee Trip</h1>
-      <p>Book Flights, Buses, Trains & Hotels Easily</p>
-    </div>
+    <section id="home" className="hero-section text-white text-center py-6">
+      <div className="container">
+        <span className="badge bg-white text-primary rounded-pill mb-3">
+          Trusted travel bookings for every journey
+        </span>
+        <h1 className="display-5 fw-bold mb-3">Plan smarter, travel better</h1>
+        <p className="lead text-white-75 mb-4">
+          Book flights, buses, trains and hotels with a single reliable experience.
+          Faster search, cleaner results, seamless booking flow.
+        </p>
+        <div className="hero-actions d-flex flex-column flex-sm-row justify-content-center gap-3">
+          <a href="#bookings" className="btn btn-gradient btn-lg">
+            Start Booking
+          </a>
+          <a href="#hotels" className="btn btn-outline-light btn-lg">
+            View Hotels
+          </a>
+        </div>
+      </div>
+    </section>
   );
 }
 
